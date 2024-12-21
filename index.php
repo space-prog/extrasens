@@ -17,6 +17,7 @@
         } else {
             $rand = $_SESSION['rand'];
         }
+        echo $_SESSION['rand'];
 
         if (!isset($_SESSION["attempts"])) {
             $attempts = $_SESSION['attempts'] = 0;
@@ -24,8 +25,15 @@
             $attempts = $_SESSION["attempts"];
         }
         
+        if(isset($_SESSION['answers'])) {
+            $answers = $_SESSION['answers'];
+        } else {
+            $answers = $_SESSION['answers'] = [];
+        }
+
         if (isset($_POST['choise'])) {
             $choise = $_POST['choise'];
+            array_push($_SESSION['answers'], $choise);
             if ($choise == $_SESSION['rand']) {
                 echo "You win, ";
             } else {
@@ -34,11 +42,13 @@
             ++$_SESSION["attempts"];
             echo $_SESSION['attempts'] . " спроб використано";
         }
+        // echo "<pre>";
+        // var_dump($_SESSION['answers']);
         
     ?>
     <form action="
         <?php
-            if($_SESSION['attempts'] >= 3) {
+            if($_SESSION['attempts'] >= 15) {
                 echo "results.php";
             } else {
                 echo "index.php";
@@ -48,7 +58,12 @@
         <select name="choise">
             <?php
                 for($i = 1; $i<=10; $i++) {
-                    echo "<option value='$i'>$i</option>";
+                    if(in_array($i, $_SESSION['answers'])) {
+                        echo "<option value='$i' disabled>$i</option>";
+                        // var_dump($_SESSION['answers'][$i]);
+                    } else {
+                        echo "<option value='$i'>$i</option>";
+                    }
                 }
             ?>
         </select>
