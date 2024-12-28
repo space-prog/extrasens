@@ -17,7 +17,10 @@
         } else {
             $rand = $_SESSION['rand'];
         }
-        echo $_SESSION['rand'];
+        echo $_SESSION['rand'] . "<br>";
+        // $sel = $_POST['sel'];
+        $j = floor($rand / 10) * 10 + 1;
+        echo "$j округлене <br>";
 
         if (!isset($_SESSION["attempts"])) {
             $attempts = $_SESSION['attempts'] = 0;
