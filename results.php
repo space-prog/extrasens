@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php
-        $numbers = $_POST['5numbers'];
+        $numbers = $_POST['numbers'];
         $rand = $_SESSION['rand'];
         if($numbers==$rand) {
             echo "Ви виграли!! ";

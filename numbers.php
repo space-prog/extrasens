@@ -26,21 +26,21 @@
         } else {
             $answers = $_SESSION['answers'] = [];
         } 
-        if(isset($_POST['5numbers'])) {
-            $numbers = $_POST['5numbers'];
+        if(isset($_POST['numbers'])) {
+            $numbers = $_POST['numbers'];
             array_push($_SESSION['answers'], $numbers);
         }
     ?>
-    <form action="
-    <?php
-        if($numbers == $rand) {
-            echo "results.php";
-        } else {
-            echo "numbers.php";
+    <form action="<?php
+        if(isset($_POST['numbers'])) {
+            if($numbers==$rand) {
+                echo "results.php";
+            } else {
+                echo "numbers.php";
+            }
         }
-    ?>
-    " method="post">
-        <select name="5numbers">
+    ?>" method="post">
+        <select name="numbers">
             <?php
                 $x = $f + 4;
                 for($f; $f <= $x; $f++) {
