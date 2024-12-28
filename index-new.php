@@ -17,7 +17,7 @@
         } else {
             $rand = $_SESSION['rand'];
         }
-        echo $_SESSION['rand'] . "<br>";
+        // echo $_SESSION['rand'] . "<br>";
         // $sel = $_POST['sel'];
         
 
@@ -56,7 +56,7 @@
         }
     ?>
 </select>
-    <form action="index-new.php" method="post">
+    <form action="diapason.php" method="post">
         <button type="submit">Відправити</button>
     </form>
 </body>

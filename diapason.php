@@ -12,10 +12,10 @@
 <body>
     <?php
         $j = floor($_SESSION['rand'] / 10) * 10 + 1;
-        echo "$j округлене <br>";
+        // echo "$j округлене <br>";
     ?>
-    <form action="5numbers.php" method="post">
-        <select name="">
+    <form action="numbers.php" method="post">
+        <select name="choise">
             <?php
                 $x = $j + 9;
                 for($j; $j <= $x; $j++) {
@@ -23,6 +23,7 @@
                 }
             ?>
         </select>
+        <button type="submit">Відправити</button>
     </form>
 </body>
 </html>
