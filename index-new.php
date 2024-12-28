@@ -19,8 +19,7 @@
         }
         echo $_SESSION['rand'] . "<br>";
         // $sel = $_POST['sel'];
-        $j = floor($rand / 10) * 10 + 1;
-        echo "$j округлене <br>";
+        
 
         if (!isset($_SESSION["attempts"])) {
             $attempts = $_SESSION['attempts'] = 0;
@@ -57,27 +56,7 @@
         }
     ?>
 </select>
-    <form action="
-        <?php
-            if($_SESSION['attempts'] >= 15) {
-                echo "results.php";
-            } else {
-                echo "index.php";
-            }
-        ?>
-    " method="post"> 
-        <select name="choise">
-            <?php
-                for($i = 1; $i<=10; $i++) {
-                    if(in_array($i, $_SESSION['answers'])) {
-                        echo "<option value='$i' disabled>$i</option>";
-                        // var_dump($_SESSION['answers'][$i]);
-                    } else {
-                        echo "<option value='$i'>$i</option>";
-                    }
-                }
-            ?>
-        </select>
-        <button type="submit">Перевірка</button>
+    <form action="index-new.php" method="post">
+        <button type="submit">Відправити</button>
     </form>
 </body>
