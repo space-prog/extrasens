@@ -20,23 +20,26 @@
         } else {
             $f = ceil($rand/10) * 10 + 1 - 5;
         }
+        echo $_SESSION['attempts'];
         // echo "F: $f";   
         if(isset($_SESSION['answers'])) {
             $answers = $_SESSION['answers'];
         } else {
             $answers = $_SESSION['answers'] = [];
         } 
+        $numbers = $_POST['numbers'];
+        $_SESSION['numbers'] = $numbers;
         if(isset($_POST['numbers'])) {
-            $numbers = $_POST['numbers'];
+            ++$_SESSION['attempts'];
             array_push($_SESSION['answers'], $numbers);
         }
     ?>
-    <form action="<?php
+    <form action="
+    numbers.php
+    <?php
         if(isset($_POST['numbers'])) {
-            if($numbers==$rand) {
-                echo "results.php";
-            } else {
-                echo "numbers.php";
+            if($numbers==$rand || $_SESSION['attempts']>=3) {
+                header('Location: results.php');
             }
         }
     ?>" method="post">

@@ -17,9 +17,6 @@
         } else {
             $rand = $_SESSION['rand'];
         }
-        // echo $_SESSION['rand'] . "<br>";
-        // $sel = $_POST['sel'];
-        
 
         if (!isset($_SESSION["attempts"])) {
             $attempts = $_SESSION['attempts'] = 0;
@@ -31,22 +28,7 @@
             $answers = $_SESSION['answers'];
         } else {
             $answers = $_SESSION['answers'] = [];
-        }
-
-        if (isset($_POST['choise'])) {
-            $choise = $_POST['choise'];
-            array_push($_SESSION['answers'], $choise);
-            if ($choise == $_SESSION['rand']) {
-                echo "You win, ";
-            } else {
-                echo "try again, ";
-            }
-            ++$_SESSION["attempts"];
-            echo $_SESSION['attempts'] . " спроб використано";
-        }
-        // echo "<pre>";
-        // var_dump($_SESSION['answers']);
-        
+        } 
     ?>
 <select name="" id="">
     <?php
