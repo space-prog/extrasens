@@ -20,16 +20,16 @@
         } else {
             $f = ceil($rand/10) * 10 + 1 - 5;
         }
-        echo $_SESSION['attempts'];
+        // echo $_SESSION['attempts'];
         // echo "F: $f";   
         if(isset($_SESSION['answers'])) {
             $answers = $_SESSION['answers'];
         } else {
             $answers = $_SESSION['answers'] = [];
         } 
-        $numbers = $_POST['numbers'];
-        $_SESSION['numbers'] = $numbers;
         if(isset($_POST['numbers'])) {
+            $numbers = $_POST['numbers'];
+            $_SESSION['numbers'] = $numbers;
             ++$_SESSION['attempts'];
             array_push($_SESSION['answers'], $numbers);
         }
