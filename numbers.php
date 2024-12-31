@@ -7,9 +7,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/numbers.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="blur">  
+        <span class="bulb1"></span>
+        <span class="bulb2"></span>
+    </div>
     <?php
         $rand = $_SESSION['rand'];
         // echo "$rand";
@@ -43,20 +48,24 @@
             }
         }
     ?>" method="post">
-        <select name="numbers">
-            <?php
-                $x = $f + 4;
-                for($f; $f <= $x; $f++) {
-                    // echo "<option value='$f'>$f</option>";
-                    if(in_array($f, $_SESSION['answers'])) {
-                        echo "<option value='$f' disabled>$f</option>";
-                    } else {
-                        echo "<option value='$f'>$f</option>";
+    <div class="zindex">
+        <label class="arrow">
+            <select name="numbers">
+                <?php
+                    $x = $f + 4;
+                    for($f; $f <= $x; $f++) {
+                        // echo "<option value='$f'>$f</option>";
+                        if(in_array($f, $_SESSION['answers'])) {
+                            echo "<option value='$f' disabled>$f</option>";
+                        } else {
+                            echo "<option value='$f'>$f</option>";
+                        }
                     }
-                }
-            ?>
-        </select>
+                ?>
+            </select>
+        </label>
         <button type="submit">Перевірка</button>
+    </div>
     </form>
             
 </body>
