@@ -2,21 +2,27 @@
 <?php
     session_start();
     // session_destroy();
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Document</title>
 </head>
-<body>
-    <div class="blur">
-        <span class="bulb1"></span>
-        <span class="bulb2"></span>
+<body class="dark-body">
+    <div class="blur circle-blur">
+        <span class="bulb bulb1"></span>
+        <span class="bulb bulb2"></span>
     </div>
-        <?php
+    <?php           
+            if(isset($_POST["clear"])) {
+                $_SESSION["answers"] = [];
+                $rand = $_SESSION['rand'] = rand(1,100);
+            }
+
             if(!isset($_SESSION['rand'])) {
                 $rand = $_SESSION['rand'] = rand(1,100);
             } else {
@@ -33,21 +39,29 @@
             } else {
                 $answers = $_SESSION['answers'] = [];
             }
+
         ?>
-        <div class="zindex">
-            <label class="arrow">
-                <select name="" id="">
-                <?php
-                    for ($i = 1; $i <=100; $i+=10) {
-                        $j=$i+9;
-                        echo "<option value='$i'>$i - $j</option>";
-                    }
-                ?>
-                </select>
-            </label>
-            <form action="diapason.php" method="post">
-                <button type="submit">Перевірка</button>
-            </form>
+        <div class="flex">
+            <div class="zindex">
+                <div class="block2">
+                    <p>Вітаю тебе у грі екстрасенси, Я загадав число від одного до ста. Спробуй вгадати діапазон у якому знаходиться це число</p>
+                </div>
+                <div class="block1 flex">
+                    <form action="diapason.php" method="post">
+                    <label class="arrow arrow-lightblue">
+                        <select name="select" id="">
+                        <?php
+                            for ($i = 1; $i <=100; $i+=10) {
+                                $j=$i+9;
+                                echo "<option value='$i'>$i - $j</option>";
+                            }
+                        ?>
+                        </select>
+                    </label>
+                        <button type="submit" class="button-purple">Перевірка</button>
+                    </form>
+                </div>
+            </div>
         </div>
 </body>
 <!-- Вітаю з новим роком того хто зайшов в мій код -->

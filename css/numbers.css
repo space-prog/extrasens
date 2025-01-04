@@ -13,6 +13,20 @@ body {
     position: relative;
 }
 
+p {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    color: #fff;
+}
+
+.block1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    min-height: 100vh;
+}
+
 .blur {
     position: absolute;
     width: 100%;
@@ -26,7 +40,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     display: flex;
     column-gap: 20px;
     z-index: 1000;
