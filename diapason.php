@@ -16,30 +16,30 @@
 <body class="white-body">
 <div class="blur snow-blur">
     <div class="zindex">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg1">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg2">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg3">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg4">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg5">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg6">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg7">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg8">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg1">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg2">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg3">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg4">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg5">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg6">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg7">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg8">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg3">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg4">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg5">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg6">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg7">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg8">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg6">
-        <img src="images/307887.svg" alt="Сніжинка" class="svg7">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg1 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg2 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg3 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg4 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg5 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg6 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg7 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg8 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg1 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg2 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg3 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg4 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg5 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg6 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg7 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg8 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg3 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg4 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg5 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg6 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg7 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg8 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg6 svg">
+        <img src="images/307887.svg" alt="Сніжинка" class="svg7 svg">
     </div>
 </div>
 <div class="block1 flex height">
@@ -57,8 +57,8 @@
                 ?>
             </div>
             <div class="block2">
-                <form action="numbers.php" method="post" class="flex cg">
-                    <div class="flex">
+                <form action="numbers.php" method="post" class="flex">
+                    <div class="flex cg">
                         <label class="arrow arrow-lightblue label-border">
                             <select name="choise">
                                 <?php

@@ -48,7 +48,7 @@
         }
         
         ?>
-    <div class="block1 flex">
+    <div class="block1 flex height">
         <div class="wrap">
             <div>
                 <?php
@@ -68,8 +68,8 @@
                             header('Location: results.php');
                         }
                     }
-                    ?>" method="post">
-                <div class="zindex">
+                    ?>" method="post" class="flex ">
+                <div class="zindex flex cg">
                     <label class="arrow arrow-yellow">
                         <select name="numbers">
                             <?php

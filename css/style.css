@@ -35,7 +35,7 @@ p {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
 }
 
 button {
@@ -194,6 +194,7 @@ label {
 }
 
 .cg {
+    display: flex;
     column-gap: 20px;
 }
 
@@ -223,48 +224,46 @@ img {
     transition: all 7s ease;
 }
 
-.svg1 {
+.svg1, .svg6 {
     width: 100px;
     height: 100px;
 }
 .svg2 {
-    animation: coin 7s linear 2s infinite;
+    animation-delay: 4.8s;
     width: 70px;
     height: 70px;
     left: 21%;
 }
 .svg3 {
-    animation: coin 7s linear .5s infinite;
+    animation-delay: .5s;
     width: 110px;
     height: 110px;
     left: 15%;
 }
 .svg4 {
-    animation: coin 7s linear 4s infinite;
+    animation-delay: 4s;
     width: 50px;
     height: 50px;
     right: 20%;
 }
 .svg5 {
-    animation: coin 7s linear 1.5s infinite;
+    animation-delay: 1.5s;
     width: 72px;
     height: 72px;
     left: 10%;
 }
 .svg6 {
-    animation: coin 7s linear  3s infinite;
-    width: 100px;
-    height: 100px;
+    animation-delay: 3s;
     right: 62%;
 }
 .svg7 {
-    animation: coin 7s linear 4.8s infinite;
+    animation-delay: 4.8s;
     width: 58px;
     height: 58px;
     left: 58%;
 }
 .svg8 {
-    animation: coin 7s linear 5.3s infinite;
+    animation-delay: 5.3s;
     width: 80px;
     height: 80px;
     right: 43%;
