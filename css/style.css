@@ -168,9 +168,6 @@ select, option {
 
 label {
     border-radius: 5px;
-}
-
-.label-border {
     border: 2px solid;
 }
 
