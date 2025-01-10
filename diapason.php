@@ -58,7 +58,6 @@
             </div>
             <div class="block2">
                 <form action="numbers.php" method="post" class="flex">
-                    <div class="flex cg">
                         <label class="arrow arrow-lightblue label-border">
                             <select name="choise">
                                 <?php
@@ -70,7 +69,6 @@
                             </select>
                         </label>
                         <button type="submit" class="button-lightblue">Відправити</button>
-                    </div>
                 </form>
             </div>
     </div>

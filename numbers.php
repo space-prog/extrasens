@@ -69,7 +69,6 @@
                         }
                     }
                     ?>" method="post" class="flex ">
-                <div class="zindex flex cg">
                     <label class="arrow arrow-yellow">
                         <select name="numbers">
                             <?php
@@ -86,7 +85,6 @@
                         </select>
                     </label>
                     <button type="submit" class="button-yellow">Перевірка</button>
-                </div>
                 </form>
             </div>
         </div>
