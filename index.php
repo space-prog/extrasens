@@ -9,7 +9,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body class="dark-body">
@@ -41,13 +43,13 @@
             }
 
         ?>
-        <div class="flex">
+        <div class="flex height">
             <div class="zindex">
                 <div class="block2">
                     <p>Вітаю тебе у грі екстрасенси, Я загадав число від одного до ста. Спробуй вгадати діапазон у якому знаходиться це число</p>
                 </div>
-                <div class="block1 flex">
-                    <form action="diapason.php" method="post">
+                <div class="block1">
+                    <form action="diapason.php" method="post" class="flex">
                     <label class="arrow arrow-lightblue">
                         <select name="select" id="">
                         <?php
@@ -58,7 +60,7 @@
                         ?>
                         </select>
                     </label>
-                        <button type="submit" class="button-purple">Перевірка</button>
+                    <button type="submit" class="button-purple">Перевірка</button>
                     </form>
                 </div>
             </div>

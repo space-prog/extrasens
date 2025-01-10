@@ -176,13 +176,29 @@ label {
 
 .block1 {
     padding-top: 20px;
-    column-gap: 20px;
 }
 
 .flex {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+
+.height  {
+    height: 100vh;
+}
+
+.block1 > form {
+    column-gap: 20px;
+}
+
+.cg {
+    column-gap: 20px;
+}
+
+.block2 > .flex {
+    column-gap: 20px;
 }
 
 p {
@@ -192,7 +208,7 @@ p {
 
 .zindex {
     position: relative;
-    display: flex;
+    /* display: flex; */
     z-index: 0;
 }
 
@@ -261,4 +277,8 @@ img {
     100% {
         transform: translateY(1200px) rotate(-135deg);
     }
+}
+
+.white-body p {
+    color: #000;
 }

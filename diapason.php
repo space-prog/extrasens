@@ -8,6 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body class="white-body">
@@ -39,7 +42,7 @@
         <img src="images/307887.svg" alt="Сніжинка" class="svg7">
     </div>
 </div>
-<div class="block1 flex">
+<div class="block1 flex height">
     <div class="wrap">
             <div>
                 <?php
@@ -54,7 +57,7 @@
                 ?>
             </div>
             <div class="block2">
-                <form action="numbers.php" method="post">
+                <form action="numbers.php" method="post" class="flex cg">
                     <div class="flex">
                         <label class="arrow arrow-lightblue label-border">
                             <select name="choise">
