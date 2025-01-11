@@ -23,6 +23,7 @@
             if(isset($_POST["clear"])) {
                 $_SESSION["answers"] = [];
                 $rand = $_SESSION['rand'] = rand(1,100);
+                $attempts = $_SESSION['attempts'] = 0;
             }
 
             if(!isset($_SESSION['rand'])) {

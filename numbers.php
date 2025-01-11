@@ -20,8 +20,11 @@
     </div>
     <?php
         $rand = $_SESSION['rand'];
-        $choise = $_POST['choise'];
-        
+        if(isset($_POST['choise'])) {
+            $choise = $_POST['choise'];
+            $_SESSION['numbers'] = $choise;
+            ++$_SESSION['attempts'];
+            array_push($_SESSION['answers'], $choise);
         // echo "$rand";
         $ostacha = $rand % 10;
         // echo " $ostacha";
@@ -37,15 +40,6 @@
         } else {
             $answers = $_SESSION['answers'] = [];
         } 
-
-        
-
-        if(isset($_POST['numbers'])) {
-            $numbers = $_POST['numbers'];
-            $_SESSION['numbers'] = $numbers;
-            ++$_SESSION['attempts'];
-            array_push($_SESSION['answers'], $numbers);
-        }
         
         ?>
     <div class="block1 flex height">
@@ -63,14 +57,14 @@
                 <form action="
                 numbers.php
                 <?php
-                    if(isset($_POST['numbers'])) {
-                        if($numbers==$rand || $_SESSION['attempts']>=3) {
+                    if(isset($_POST['choise'])) {
+                        if($choise==$rand || $_SESSION['attempts']>=3) {
                             header('Location: results.php');
                         }
                     }
                     ?>" method="post" class="flex ">
                     <label class="arrow arrow-yellow">
-                        <select name="numbers">
+                        <select name="choise">
                             <?php
                                 $x = $f + 4;
                                 for($f; $f <= $x; $f++) {
@@ -89,6 +83,8 @@
             </div>
         </div>
     </div>
+     <?php    } ?>
+        
             
 </body>
 </html>
